@@ -6,12 +6,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessagePrinter {
 
-  final private MessageService service;
-
   @Autowired
-  public MessagePrinter(MessageService service) {
-    this.service = service;
-  }
+  private HiMessageService service;
+
+  // construction injection
+  // @Autowired
+  // public MessagePrinter(HiMessageService service) {
+  // this.service = service;
+  // }
 
   public void printMessage() {
     System.out.println(this.service.getMessage());

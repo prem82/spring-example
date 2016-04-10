@@ -7,14 +7,15 @@ import org.springframework.context.annotation.*;
 @ComponentScan
 public class Application {
 
-  @Bean
-  MessageService mockMessageService() {
-    return new MessageService() {
-      public String getMessage() {
-        return "Hello World!";
-      }
-    };
-  }
+  // Defining the bean explicitly
+//  @Bean
+//  MessageService mockMessageService() {
+//    return new MessageService() {
+//      public String getMessage() {
+//        return "Hello World!";
+//      }
+//    };
+//  }
 
   public static void main(String[] args) {
     ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
